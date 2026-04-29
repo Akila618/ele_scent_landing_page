@@ -1,0 +1,83 @@
+.hero {
+    background-image: url('/images/hero-elephants.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1.5rem 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 72vh;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+
+.hero-content {
+    max-width: 640px;
+}
+
+.hero-content h1 {
+    font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+    color: #18351d;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    animation: slideInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+.hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #12351d;
+}
+
+.project-tagline {
+    font-size: 0.95rem;
+    color: #203126;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.5rem 1rem 3rem;
+        min-height: 58vh;
+    }
+
+    .hero::before {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.26) 100%);
+    }
+
+    .hero-inner {
+        align-items: flex-start;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}

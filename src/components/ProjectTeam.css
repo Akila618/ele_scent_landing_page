@@ -1,0 +1,111 @@
+.project-team {
+  padding: 2.5rem 1.5rem 3rem;
+  background-color: #c8e6c9;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.project-team.animate {
+  opacity: 1;
+}
+
+.project-team.animate .team-member {
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both !important;
+  opacity: 1 !important;
+}
+
+.project-team h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.team-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.team-member {
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.team-member:nth-child(1) { animation-delay: 0.05s; }
+.team-member:nth-child(2) { animation-delay: 0.1s; }
+.team-member:nth-child(3) { animation-delay: 0.15s; }
+.team-member:nth-child(4) { animation-delay: 0.2s; }
+.team-member:nth-child(5) { animation-delay: 0.25s; }
+.team-member:nth-child(6) { animation-delay: 0.3s; }
+
+.team-member:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.team-member:hover .member-image {
+  transform: scale(1.05);
+}
+
+.member-image {
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  object-fit: cover;
+  display: block;
+  background: #f5f5f5;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.team-member h3 {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  margin: 0.65rem 0 0.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0 0.75rem;
+}
+
+.team-member p {
+  font-size: 0.72rem;
+  color: #3f3f3f;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 0 0.75rem 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .project-team h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

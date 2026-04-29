@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#8FBC8F"/>
+  <circle cx="200" cy="200" r="80" fill="#A0826D"/>
+  <circle cx="400" cy="300" r="100" fill="#A0826D"/>
+  <circle cx="900" cy="250" r="90" fill="#A0826D"/>
+  <polygon points="300,500 350,300 400,500" fill="#228B22"/>
+  <polygon points="800,500 850,350 900,500" fill="#228B22"/>
+  <text x="600" y="550" font-size="28" fill="#fff" text-anchor="middle" opacity="0.7">Data Section Background - Replace with your image</text>
+</svg>
