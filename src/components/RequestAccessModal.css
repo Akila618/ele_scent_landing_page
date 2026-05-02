@@ -1,0 +1,62 @@
+/* container */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+/* label wrapper */
+.custom-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #444;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hide native checkbox completely */
+.custom-check input {
+  display: none;
+}
+
+/* fake checkbox */
+.custom-check .box {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #999;
+  border-radius: 3px;
+  background: #fff;
+
+  /* 🔥 IMPORTANT: no animation at all */
+  transition: none;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* checked state */
+.custom-check input:checked + .box {
+  background: #198754;
+  border-color: #198754;
+}
+
+/* static tick (NO animation) */
+.custom-check input:checked + .box::after {
+  content: "✔";
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+/* hover only background (no movement) */
+.custom-check:hover .box {
+  background: #f1f3f5;
+}

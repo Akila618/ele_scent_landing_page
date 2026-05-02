@@ -7,6 +7,8 @@ import VisionMission from './components/VisionMission'
 import DataSection from './components/DataSection'
 import ProjectTeam from './components/ProjectTeam'
 import Footer from './components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

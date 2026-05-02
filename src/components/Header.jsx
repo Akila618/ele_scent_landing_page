@@ -10,9 +10,8 @@ export default function Header() {
         </div>
         <nav className="nav">
           <a href="#about">About</a>
-          <a href="#vision">Our Vision</a>
-          <a href="#mission">Our Mission</a>
-          <a href="#contact">Contact Us</a>
+          <a href="#vision-mission">Vision & Mission</a>
+          <a href="#data">Contact Us</a>
         </nav>
       </div>
     </header>
