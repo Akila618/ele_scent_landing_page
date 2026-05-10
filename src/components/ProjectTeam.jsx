@@ -6,37 +6,37 @@ export default function ProjectTeam() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Mr. Satya Waidanparthe',
+      name: 'Saliya Wikramasinhe',
       role: 'Project Coordinator',
       image: '/images/saliya.png'
     },
     {
       id: 2,
-      name: 'Sampath Dhanarante',
+      name: 'Sampath Disanayake',
       role: 'Project Coordinator & ML Lead',
       image: '/images/sampath.png'
     },
     {
       id: 3,
-      name: 'Shimoda Chothioriengo',
+      name: 'Bhanuka Rajagalgoda',
       role: 'ML & Hardware Integration Lead',
       image: '/images/bhanuka.png'
     },
     {
       id: 4,
-      name: 'Priyamth Pnnamahotunge',
+      name: 'Piyumi Pnnamahotunge',
       role: 'UI/UX & Graphic Animator Lead',
       image: '/images/puumi.png'
     },
     {
       id: 5,
-      name: 'Kausthika Shindaram',
+      name: 'Kaushika Weerakoon',
       role: 'Hardware & Communication Lead',
       image: '/images/kaushika.png'
     },
     {
       id: 6,
-      name: 'Akila Manchurata',
+      name: 'Akila Wanninayake',
       role: 'Cloud & Database Lead',
       image: '/images/akila.png'
     }
