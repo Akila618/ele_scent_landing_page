@@ -60,3 +60,74 @@
 .custom-check:hover .box {
   background: #f1f3f5;
 }
+
+/* Modal title color matching Figma */
+.modal-title-small {
+  color: #18351d;
+  font-weight: 700;
+}
+
+/* Background image on the whole modal with shadow overlay */
+.modal-content {
+  background-image: url('/images/hero-elephants.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Semi-transparent white overlay to keep content readable */
+.modal-content::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure all modal children sit above the overlay */
+.modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer buttons — bold text */
+.modal-footer .btn {
+  font-weight: 700;
+}
+
+/* Cancel button — gray border */
+.modal-footer .btn-light {
+  border: 1.5px solid #adb5bd;
+}
+
+/* Input, textarea & select — subtle gray border + semi-transparent bg */
+.small-form .form-control,
+.small-form .form-select {
+  border: 1px solid #ced4da;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+/* Placeholder — slightly darker gray */
+.small-form .form-control::placeholder {
+  color: #888e96;
+}
+
+/* Focus — soft green border + glow */
+.small-form .form-control:focus,
+.small-form .form-select:focus {
+  border-color: #8fbc9e;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.12);
+}
+
+/* Fix dropdown arrow on form-select */
+.small-form .form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding-right: 2.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+}

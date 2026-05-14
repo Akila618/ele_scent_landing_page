@@ -94,6 +94,19 @@ export default function RequestAccessModal({ show, handleClose }) {
         }
     }
 
+    const isFormComplete =
+        formData.firstname.trim() !== '' &&
+        formData.lastname.trim() !== '' &&
+        formData.email.trim() !== '' &&
+        formData.organization.trim() !== '' &&
+        formData.role.trim() !== '' &&
+        formData.about.trim() !== '' &&
+        formData.purpose.trim() !== '' &&
+        formData.intendedUse !== '' &&
+        formData.reportTypes.length > 0 &&
+        formData.terms &&
+        formData.policy
+
     const handleCloseAndReset = () => {
         setFormData(initialState)
         setValidated(false)
@@ -107,7 +120,7 @@ export default function RequestAccessModal({ show, handleClose }) {
         <Modal show={show} onHide={handleCloseAndReset} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title className="modal-title-small">
-                    Request Data Access
+                    Request Research Data Access
                 </Modal.Title>
             </Modal.Header>
 
@@ -200,7 +213,7 @@ export default function RequestAccessModal({ show, handleClose }) {
                             as="textarea"
                             rows={2}
                             name="about"
-                            placeholder="About you / your team"
+                            placeholder="About You / Your Team"
                             required
                             onChange={handleChange}
                         />
@@ -236,7 +249,7 @@ export default function RequestAccessModal({ show, handleClose }) {
                         <div className="checkbox-group">
                             {[
                                 "ELEPHANT_REPORT",
-                                "ODOUR_REPORT",
+                                "ODOR_REPORT",
                                 "SENSOR_DATA",
                                 "ENVIRONMENTAL_DATA"
                             ].map((type) => (
@@ -287,7 +300,7 @@ export default function RequestAccessModal({ show, handleClose }) {
                             Cancel
                         </Button>
 
-                        <Button variant="success" type="submit" disabled={loading}>
+                        <Button variant="success" type="submit" disabled={loading || !isFormComplete}>
                             {loading ? (
                                 <>
                                     <Spinner size="sm" className="me-2" />
