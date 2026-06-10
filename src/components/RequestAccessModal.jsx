@@ -248,10 +248,8 @@ export default function RequestAccessModal({ show, handleClose }) {
 
                         <div className="checkbox-group">
                             {[
-                                "ELEPHANT_REPORT",
-                                "ODOR_REPORT",
-                                "SENSOR_DATA",
-                                "ENVIRONMENTAL_DATA"
+                                "ELEPHANT_DETECTION_REPORT",
+                                "DEFAULT",
                             ].map((type) => (
                                 <label key={type} className="custom-check">
                                     <input

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5050/api/users";
+const API_URL = "http://localhost:8081/api/users";
 
 export const createExternalUserRequest = async (data) => {
   try {
