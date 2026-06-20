@@ -1,6 +1,6 @@
 .data-section {
   position: relative;
-  min-height: 500px;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,62 +34,65 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  transform: scale(1.05);
+  transition: transform 10s ease-out;
+}
+
+.data-section:hover .data-section-bg {
+  transform: scale(1);
 }
 
 .data-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26,67,43,0.85) 0%, rgba(0,0,0,0.6) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
   text-align: center;
   z-index: 2;
 }
 
 .data-overlay h2 {
-  font-size: 2.2rem;
-  color: #fff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ffffff;
   margin-bottom: 1.5rem;
-  animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+  font-weight: 800;
   opacity: 0;
 }
 
 .data-overlay p {
-  font-size: 1rem;
-  color: #f0f0f0;
-  max-width: 600px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 650px;
   margin-bottom: 1rem;
-  line-height: 1.7;
-  animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+  line-height: 1.8;
   opacity: 0;
 }
 
 .cta-button {
-  background-color: #4a9d6f;
+  background-color: var(--secondary-color);
   color: #fff;
   border: none;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  border-radius: 4px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  margin-top: 1.5rem;
-  animation: scaleIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+  font-weight: 700;
+  transition: all var(--transition-normal);
+  margin-top: 2rem;
   opacity: 0;
-  box-shadow: 0 4px 15px rgba(74, 157, 111, 0.3);
+  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+  animation: pulse-soft 2s infinite;
 }
 
 .cta-button:hover {
-  background-color: #3a7d57;
+  background-color: var(--secondary-hover);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(74, 157, 111, 0.4);
+  box-shadow: 0 8px 25px rgba(245, 166, 35, 0.5);
+  animation: none; /* Stop pulsing on hover */
 }
 
 .cta-button:active {
@@ -98,14 +101,6 @@
 
 @media (max-width: 768px) {
   .data-section {
-    min-height: 400px;
-  }
-
-  .data-overlay h2 {
-    font-size: 1.5rem;
-  }
-
-  .data-overlay p {
-    font-size: 0.9rem;
+    min-height: 50vh;
   }
 }

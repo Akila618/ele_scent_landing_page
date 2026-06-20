@@ -7,19 +7,19 @@ export default function ProjectTeam() {
     {
       id: 1,
       name: 'Mr. Saliya Wickramasinghe',
-      role: 'Project Coordinator - Supervisor',
+      role: 'Project Coordinator - Supervisor (CITES OUSL)',
       image: '/images/saliya.png'
     },
     {
       id: 2,
-      name: 'Sampath Dissanayake',
-      role: 'IOT, Reporting and Project Management',
-      image: '/images/sampath.png'
+      name: 'Akila Wanninayake',
+      role: 'Team Lead, Research & Development, Architecture, Machine Learning',
+      image: '/images/akila2.jpeg'
     },
     {
       id: 3,
       name: 'Bhanuka Rajagalgoda',
-      role: 'Hadware Integration, Machine Learning and Testing',
+      role: 'Hardware Integration, Machine Learning and Testing',
       image: '/images/bhanuka.png'
     },
     {
@@ -36,21 +36,23 @@ export default function ProjectTeam() {
     },
     {
       id: 6,
-      name: 'Akila Wanninayake',
-      role: 'Research, Development, Architecture and Cloud',
-      image: '/images/akila.png'
+      name: 'Sampath Dissanayake',
+      role: 'IOT, Reporting and Project Management',
+      image: '/images/sampath.png'
     }
   ]
 
   return (
     <section className={`project-team ${isInView ? 'animate' : ''}`} ref={ref}>
-      <h2>PROJECT TEAM</h2>
+      <h2>Project Team</h2>
       <div className="team-grid">
         {teamMembers.map(member => (
           <div key={member.id} className="team-member">
             <img src={member.image} alt={member.name} className="member-image" />
-            <h3>{member.name}</h3>
-            <p>{member.role}</p>
+            <div className="team-member-info">
+              <h3>{member.name}</h3>
+              <p>{member.role}</p>
+            </div>
           </div>
         ))}
       </div>

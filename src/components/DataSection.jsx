@@ -15,7 +15,7 @@ export default function DataSection() {
         ref={ref}
       >
         <img
-          src="/images/data-section-bg.jpg"
+          src="/images/3558093.jpg"
           alt="Elephants in grassland"
           className="data-section-bg"
         />

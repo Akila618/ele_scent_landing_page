@@ -72,23 +72,32 @@ export default function RequestAccessModal({ show, handleClose }) {
                 role: formData.role,
                 about: formData.about,
                 purpose: formData.purpose,
-                intendentuse: formData.intendedUse,
-                reportTypes: formData.reportTypes.join(",")
+                intendedUse: formData.intendedUse,
+                reportTypes: formData.reportTypes.join(", ")
             }
 
-            const response = await createExternalUserRequest(payload)
+            const response = await fetch("https://formspree.io/f/mvzneabn", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            })
 
-            if (response?.status === "success") {
+            if (response.ok) {
                 setSuccess(true)
             } else {
-                setError(response?.message || "Something went wrong")
+                const data = await response.json();
+                if (data.errors) {
+                    setError(data.errors.map(err => err.message).join(", "))
+                } else {
+                    setError("Something went wrong")
+                }
             }
 
         } catch (err) {
-            setError(
-                err?.response?.data?.message ||
-                "Server error. Please try again later."
-            )
+            setError("Server error. Please try again later.")
         } finally {
             setLoading(false)
         }
