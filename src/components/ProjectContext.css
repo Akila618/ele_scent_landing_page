@@ -1,6 +1,6 @@
 .project-context {
   padding: 8rem 1.5rem;
-  background: linear-gradient(135deg, #f4f7f5 0%, #e8f0eb 50%, #f4f7f5 100%);
+  background: linear-gradient(135deg, #e0ebd5 0%, #d1e2c6 50%, #e0ebd5 100%);
   background-size: 200% 200%;
   animation: gradientShift 10s ease infinite;
   position: relative;
@@ -97,13 +97,37 @@
   }
   
   .context-header, .context-body {
-    padding-left: 1rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .context-header {
+    border-left: none;
+    border-bottom: 4px solid var(--primary-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .context-body p {
     font-size: 1.05rem;
-    text-align: left;
+    text-align: center;
   }
 }
 
-
+@media (max-width: 480px) {
+  .project-context {
+    padding: 3rem 1rem;
+  }
+  
+  .context-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .context-body p {
+    font-size: 1rem;
+  }
+  
+  .context-header, .context-body {
+    padding-left: 0;
+  }
+}

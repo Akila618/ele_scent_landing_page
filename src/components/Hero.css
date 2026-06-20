@@ -79,10 +79,17 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 80vh;
+        padding-top: 12rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         min-height: 70vh;
-        padding: 4rem 1rem;
+        padding: 11rem 1rem 4rem;
         background-attachment: scroll; /* Disable parallax on mobile */
     }
 
@@ -92,5 +99,29 @@
 
     .hero-content h1 {
         font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 14rem 1rem 3rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn-primary, .hero-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 }

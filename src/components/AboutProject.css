@@ -108,9 +108,30 @@
   .about-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .about-project {
     padding: 5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-project {
+    padding: 3rem 1rem;
+  }
+  
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    text-align: center;
   }
 }

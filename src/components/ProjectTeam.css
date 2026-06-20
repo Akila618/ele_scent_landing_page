@@ -102,9 +102,47 @@
   transition: transform var(--transition-normal);
 }
 
+.member-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.linkedin-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(10, 102, 194, 0.9); /* LinkedIn Blue */
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.linkedin-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.linkedin-btn:hover {
+  background-color: #0a66c2;
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
 .team-member:hover .member-image {
   transform: scale(1.03);
 }
+
 
 .team-member-info {
   padding: 1.5rem 1rem;
@@ -141,5 +179,28 @@
   .team-grid {
     gap: 1.5rem;
   }
+  
+  .team-member {
+    max-width: 220px;
+  }
 }
 
+@media (max-width: 480px) {
+  .project-team {
+    padding: 3rem 1rem;
+  }
+  
+  .project-team h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .team-member {
+    max-width: 200px;
+  }
+  
+  .member-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}

@@ -85,3 +85,16 @@
   }
 }
 
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+}

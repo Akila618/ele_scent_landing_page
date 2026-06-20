@@ -99,3 +99,16 @@
     }
 }
 
+@media (max-width: 480px) {
+    .features-section {
+        padding: 3rem 1rem;
+    }
+    
+    .features-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+}
