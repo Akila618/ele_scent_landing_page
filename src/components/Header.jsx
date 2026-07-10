@@ -21,9 +21,13 @@ export default function Header() {
         </a>
         <nav className="nav">
           <a href="#about">About</a>
-          <a href="#features">Technology</a>
-          <a href="#vision-mission">Vision</a>
+          <a href="#vision-mission">Vision &amp; Mission</a>
+          <a href="#features">How It Works</a>
+          <a href="#e-nose">E-nose</a>
+          <a href="#results">Results</a>
           <a href="#data" className="nav-cta">Data Access</a>
+          <a href="#project-team">Team</a>
+          <a href="#tools-tech">Tools &amp; Tech</a>
         </nav>
       </header>
     </div>

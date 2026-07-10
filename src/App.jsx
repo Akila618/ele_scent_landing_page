@@ -8,6 +8,9 @@ import Features from './components/Features'
 import VisionMission from './components/VisionMission'
 import DataSection from './components/DataSection'
 import ProjectTeam from './components/ProjectTeam'
+import ENoseSection from './components/ENoseSection'
+import ConfidentialResultsSection from './components/ConfidentialResultsSection'
+import ToolsTech from './components/ToolsTech'
 import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,11 +22,14 @@ function App() {
       <Header />
       <Hero />
       <ProjectContext />
+      <VisionMission />
       <AboutProject />
       <Features />
-      <VisionMission />
+      <ENoseSection />
+      <ConfidentialResultsSection />
       <DataSection />
       <ProjectTeam />
+      <ToolsTech />
       <ContactUs />
       <Footer />
     </div>

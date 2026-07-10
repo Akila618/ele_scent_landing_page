@@ -35,6 +35,19 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section[id] {
+  scroll-margin-top: clamp(6.5rem, 10vw, 9rem);
+}
+
 .app {
   width: 100%;
   overflow-x: hidden;

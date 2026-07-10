@@ -49,7 +49,7 @@ export default function ProjectTeam() {
   ]
 
   return (
-    <section className={`project-team ${isInView ? 'animate' : ''}`} ref={ref}>
+    <section id="project-team" className={`project-team ${isInView ? 'animate' : ''}`} ref={ref}>
       <h2>Project Team</h2>
       <div className="team-grid">
         {teamMembers.map(member => (
