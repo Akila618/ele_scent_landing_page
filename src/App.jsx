@@ -16,6 +16,9 @@ import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+import SystemVideoSection from './components/SystemVideoSection'
+import BackToTop from './components/BackToTop'
+
 function App() {
   return (
     <div className="app">
@@ -24,6 +27,7 @@ function App() {
       <ProjectContext />
       <VisionMission />
       <AboutProject />
+      <SystemVideoSection />
       <Features />
       <ENoseSection />
       <ConfidentialResultsSection />
@@ -32,6 +36,7 @@ function App() {
       <ToolsTech />
       <ContactUs />
       <Footer />
+      <BackToTop />
     </div>
   )
 }

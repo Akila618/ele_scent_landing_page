@@ -1,0 +1,107 @@
+.system-video-section {
+  padding: 6rem 1.5rem;
+  background-color: var(--bg-secondary, #f8faf9);
+  position: relative;
+  overflow: hidden;
+}
+
+.system-video-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.system-video-header {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.system-video-section.animate .system-video-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.system-video-header h2 {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.system-video-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.system-video-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 67, 43, 0.15);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+
+.system-video-section.animate .system-video-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-responsive {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.system-video-element {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.system-video-info {
+  margin-top: 1.5rem;
+  padding: 1rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.info-desc {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .system-video-section {
+    padding: 4rem 1rem;
+  }
+  
+  .system-video-wrapper {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+}

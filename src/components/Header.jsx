@@ -3,6 +3,7 @@ import './Header.css'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,22 +13,42 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className={`header-wrapper ${scrolled ? 'scrolled' : ''}`}>
       <header className="header">
-        <a href="#" className="logo">
+        <a href="#" className="logo" onClick={closeMobileMenu}>
           <img src="/images/logo.png" alt="ELE-SCENT Logo" className="logo-img" />
           <span className="logo-text">ELE-SCENT</span>
         </a>
-        <nav className="nav">
-          <a href="#about">About</a>
-          <a href="#vision-mission">Vision &amp; Mission</a>
-          <a href="#features">How It Works</a>
-          <a href="#e-nose">E-nose</a>
-          <a href="#results">Results</a>
-          <a href="#data" className="nav-cta">Data Access</a>
-          <a href="#project-team">Team</a>
-          <a href="#tools-tech">Tools &amp; Tech</a>
+
+        <button 
+          className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle Navigation Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <a href="#about" onClick={closeMobileMenu}>About</a>
+          <a href="#system-video" onClick={closeMobileMenu}>Video</a>
+          <a href="#vision-mission" onClick={closeMobileMenu}>Vision &amp; Mission</a>
+          <a href="#features" onClick={closeMobileMenu}>How It Works</a>
+          <a href="#e-nose" onClick={closeMobileMenu}>E-nose</a>
+          <a href="#results" onClick={closeMobileMenu}>Results</a>
+          <a href="#project-team" onClick={closeMobileMenu}>Team</a>
+          <a href="#tools-tech" onClick={closeMobileMenu}>Tools</a>
+          <a href="#data" className="nav-cta" onClick={closeMobileMenu}>Data Access</a>
         </nav>
       </header>
     </div>
