@@ -6,23 +6,20 @@ export const useInView = (options = {}) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsInView(true)
-        // Stop observing once animated
-        observer.unobserve(entry.target)
-      }
+      setIsInView(entry.isIntersecting)
     }, {
       threshold: 0.1,
       ...options
     })
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    const currentRef = ref.current
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [options])
